@@ -205,10 +205,13 @@ class Game:  # Класс игры
     def loop(self):                 # Игровой цикл
         num = 0
         while True:
+            print('')
             print('Доска пользователя:')
             print(self.player_user.own_board)
+            print('')
             print('Доска компьютера:')
             print(self.player_AI.own_board)
+            print('')
 
             if num % 2 == 0:
                 print("Ход игрока:")
@@ -221,10 +224,12 @@ class Game:  # Класс игры
                 num -= 1
 
             if self.player_AI.own_board.live_ships == 0:
+                print('')
                 print("Пользователь выиграл!")
                 break
 
             if self.player_user.own_board.live_ships == 0:
+                print('')
                 print("Компьютер выиграл!")
                 break
 
