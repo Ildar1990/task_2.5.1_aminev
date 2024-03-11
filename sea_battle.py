@@ -226,12 +226,10 @@ class Game:  # Класс игры
             if self.player_AI.own_board.live_ships == 0:
                 print('')
                 print("Пользователь выиграл!")
-                break
 
             if self.player_user.own_board.live_ships == 0:
                 print('')
                 print("Компьютер выиграл!")
-                break
 
             num += 1
 
