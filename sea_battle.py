@@ -8,7 +8,7 @@ class BoardOutException(Exception):
 
 class BoardUsedException(Exception):
     def __str__(self):
-        return 'Нельзя стрелять в одну и ту же клетку.'
+        return 'Вы пытаетесь стрелять в одну и ту же клетку.'
 
 
 class ShipErrorException(Exception):
@@ -226,10 +226,12 @@ class Game:  # Класс игры
             if self.player_AI.own_board.live_ships == 0:
                 print('')
                 print("Пользователь выиграл!")
+                break
 
             if self.player_user.own_board.live_ships == 0:
                 print('')
                 print("Компьютер выиграл!")
+                break
 
             num += 1
 
@@ -240,3 +242,4 @@ class Game:  # Класс игры
 
 game = Game()
 game.start()
+input('Нажмите Enter, чтобы закрыть окно')
